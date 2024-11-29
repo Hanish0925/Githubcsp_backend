@@ -1,0 +1,34 @@
+<h1>Users</h1>
+
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <%= link_to user.name, user_path(user) %> <!-- Assuming `name` is an attribute of User -->
+      <%= link_to 'View Profile', user_path(user) %>
+    </li>
+  <% end %>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.username %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to 'Show', user_path(user) %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'New User', new_user_path %><td/>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

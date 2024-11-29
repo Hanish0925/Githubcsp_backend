@@ -1,0 +1,13 @@
+<!-- app/views/items/show.html.erb -->
+
+<h1><%= @item.name %></h1>
+
+<p><strong>Description:</strong> <%= @item.description %></p>
+<p><strong>Calories:</strong> <%= @item.calories %> kcal</p>
+<p><strong>Protein:</strong> <%= @item.protein %> g</p>
+<p><strong>Carbohydrates:</strong> <%= @item.carbohydrates %> g</p>
+<p><strong>Fat:</strong> <%= @item.fat %> g</p>
+<p><strong>Rating:</strong> <%= @item.rating %> / 5</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back to Items', items_path %>

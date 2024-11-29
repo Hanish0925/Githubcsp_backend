@@ -1,0 +1,10 @@
+<h1>Menu Details</h1>
+
+<p><strong>Week Start Date:</strong> <%= @menu.week_start_date %></p>
+<p><strong>Breakfast Items:</strong> <%= @menu.breakfast_items %></p>
+<p><strong>Lunch Items:</strong> <%= @menu.lunch_items %></p>
+<p><strong>Dinner Items:</strong> <%= @menu.dinner_items %></p>
+
+<%= link_to 'Back to Menus', menus_path, class: "btn btn-secondary" %>
+<%= link_to 'Edit Menu', edit_menu_path(@menu), class: "btn btn-warning" %>
+<%= link_to 'Delete Menu', menu_path(@menu), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>

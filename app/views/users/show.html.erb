@@ -1,0 +1,21 @@
+<h1>User Details</h1>
+
+<% if @user.name.present? %>
+  <h2><%= @user.name %>'s Profile</h2>
+<% else %>
+  <h2>User Profile</h2>
+<% end %>
+
+<p><strong>Email:</strong> <%= @user.email %></p>
+
+<% if @user.username.present? %>
+  <p><strong>Username:</strong> <%= @user.username %></p>
+<% end %>
+
+<p><strong>ID:</strong> <%= @user.id %></p>
+
+<%= link_to 'Edit Profile', edit_user_registration_path(@user) %> |
+<%= link_to 'Back to Users', users_path %>
+
+<!-- Additional user actions or details can be added below -->
+
